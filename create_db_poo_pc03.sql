@@ -21,11 +21,7 @@ CREATE TABLE `partido`
  `goles_b` int NOT NULL ,
  `pais_b`  varchar(100) NOT NULL ,
 
-PRIMARY KEY (`id`),
-KEY `FK_15` (`pais_b`),
-CONSTRAINT `FK_13` FOREIGN KEY `FK_15` (`pais_b`) REFERENCES `equipo` (`pais`),
-KEY `FK_20` (`pais_a`),
-CONSTRAINT `FK_18` FOREIGN KEY `FK_20` (`pais_a`) REFERENCES `equipo` (`pais`)
+PRIMARY KEY (`id`)
 );
 
 
@@ -42,7 +38,5 @@ CREATE TABLE `clasificacion`
  `goles_contra` int NOT NULL ,
  `diff_goles`   int NOT NULL ,
 
-PRIMARY KEY (`pais`),
-KEY `FK_26` (`pais`),
-CONSTRAINT `FK_24` FOREIGN KEY `FK_26` (`pais`) REFERENCES `equipo` (`pais`)
+PRIMARY KEY (`pais`)
 );
